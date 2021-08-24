@@ -1,7 +1,7 @@
-@import "styles/variable.scss";
+@import 'styles/variable.scss';
 
 * {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .d-flex {
@@ -16,18 +16,27 @@
   color: $pink;
 }
 
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
 .mr-20 {
-  margin-right: 20px;
+  margin-right: 5rem;
 }
 
 .px-32 {
-  padding-left: 32px;
-  padding-right: 32px;
+  padding-left: 8rem;
+  padding-right: 8rem;
 }
 
-.py-16 {
-  padding-top: 16px;
-  padding-bottom: 16px;
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.mt-4 {
+  margin-top: 2rem;
 }
 
 .avatar-gradient-border {
@@ -45,5 +54,14 @@
   &--secondary {
     background-color: $purple !important;
     color: #fff !important;
+  }
+}
+
+.ant-btn {
+  &:hover {
+    border-color: $pink !important;
+  }
+  &:focus {
+    border-color: $pink !important;
   }
 }

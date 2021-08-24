@@ -1,30 +1,28 @@
 import React from 'react';
-import {
-  Avatar, Input, PageHeader, Button, Badge,
-} from 'antd';
+import { Avatar, Input, PageHeader, Button, Badge } from 'antd';
 import { BellOutlined, SearchOutlined } from '@ant-design/icons';
 
 import './styles.scss';
 
 const Navbar: React.FC = () => (
   <PageHeader
-    title="Title"
+    title="BrandHere"
     ghost={false}
-    subTitle={(
+    subTitle={
       <Input
         size="large"
         placeholder="Search anything... "
         bordered={false}
         prefix={<SearchOutlined className="mr-10" />}
       />
-      )}
+    }
     extra={[
       <Button
-        icon={(
+        icon={
           <Badge dot>
             <BellOutlined style={{ fontSize: 22 }} />
           </Badge>
-          )}
+        }
         size="large"
         type="text"
         style={{ backgroundColor: '#fff' }}

@@ -1,12 +1,18 @@
 import React from 'react';
-import {
-  Avatar, Badge, Table, Tag,
-} from 'antd';
+import { Avatar, Badge, Dropdown, Menu, Table, Tag } from 'antd';
 import { PresetColorType, PresetStatusColorType } from 'antd/lib/_util/colors';
+import { EllipsisOutlined } from '@ant-design/icons';
 import { LiteralUnion } from 'antd/lib/_util/type';
 import { ColumnsType } from 'antd/lib/table';
 
 import Task from '../../types/task.types';
+import './styles.scss';
+
+const menu = (
+  <Menu>
+    <Menu.Item>Item 1</Menu.Item>
+  </Menu>
+);
 
 const columns: ColumnsType<Task> = [
   {
@@ -17,7 +23,8 @@ const columns: ColumnsType<Task> = [
     dataIndex: 'status',
     key: 'status',
     render: (value, { status }) => {
-      let color: LiteralUnion<PresetColorType | PresetStatusColorType, string> = 'processing';
+      let color: LiteralUnion<PresetColorType | PresetStatusColorType, string> =
+        'processing';
       if (status === 'Completed') {
         color = 'green';
       } else if (status === 'Pending') {
@@ -55,6 +62,12 @@ const columns: ColumnsType<Task> = [
           <Avatar src={user} />
         ))}
       </Avatar.Group>
+    ),
+  },
+  {
+    key: 'menu',
+    render: () => (
+      <Dropdown.Button overlay={menu} icon={<EllipsisOutlined />} />
     ),
   },
 ];

@@ -7,11 +7,7 @@ const { Title } = Typography;
 const DashboardHeader: React.FC = () => (
   <div className="d-flex">
     <Title className="mr-20" level={2}>
-      You’ve got
-      {' '}
-      <span className="pink-text">7 tasks</span>
-      {' '}
-      today
+      You’ve got <span className="pink-text">7 tasks</span> today
     </Title>
     <Button
       className="button button--secondary"
