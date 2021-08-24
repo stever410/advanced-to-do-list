@@ -31,7 +31,11 @@ const columns: ColumnsType<Task> = [
         color = 'orange';
       }
       return (
-        <Tag color={color} style={{ borderRadius: 8.5, border: 'none' }}>
+        <Tag
+          key={value}
+          color={color}
+          style={{ borderRadius: 8.5, border: 'none' }}
+        >
           {status === 'Progressing' ? 'In progress' : status}
         </Tag>
       );
@@ -59,7 +63,7 @@ const columns: ColumnsType<Task> = [
         maxStyle={{ color: '#F2F2F2', backgroundColor: '#6FCF97' }}
       >
         {users.map((user) => (
-          <Avatar src={user} />
+          <Avatar key={user} src={user} />
         ))}
       </Avatar.Group>
     ),
@@ -113,6 +117,7 @@ const data: Task[] = [
 
 const TaskTable: React.FC = () => (
   <Table
+    rowKey={(task) => task.id}
     columns={columns}
     dataSource={data}
     showHeader={false}

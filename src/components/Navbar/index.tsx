@@ -18,6 +18,7 @@ const Navbar: React.FC = () => (
     }
     extra={[
       <Button
+        key="1"
         icon={
           <Badge dot>
             <BellOutlined style={{ fontSize: 22 }} />
@@ -28,6 +29,7 @@ const Navbar: React.FC = () => (
         style={{ backgroundColor: '#fff' }}
       />,
       <Avatar
+        key="2"
         className="avatar-gradient-border"
         src="https://images.unsplash.com/photo-1503414265207-455bcd0955dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80"
       />,
