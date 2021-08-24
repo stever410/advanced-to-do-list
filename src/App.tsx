@@ -1,26 +1,25 @@
+import { Layout } from 'antd';
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import './App.scss';
+import DashboardHeader from './components/DashboardHeader';
+import Navbar from './components/Navbar';
+import TaskTable from './components/TaskTable';
+
+const { Content } = Layout;
+
+const App: React.FC = () => (
+  <Layout style={{ height: '100vh' }}>
+    <Navbar />
+    <Layout>
+      <Content className="bg-white px-32 py-16">
+        <DashboardHeader />
+        <TaskTable />
+      </Content>
+      {/* <Sider className="bg-white">Sider</Sider> */}
+    </Layout>
+    {/* <Footer>Footer</Footer> */}
+  </Layout>
+);
 
 export default App;

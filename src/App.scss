@@ -1,0 +1,49 @@
+@import "styles/variable.scss";
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.bg-white {
+  background: #fff !important;
+}
+
+.pink-text {
+  color: $pink;
+}
+
+.mr-20 {
+  margin-right: 20px;
+}
+
+.px-32 {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.py-16 {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.avatar-gradient-border {
+  border: solid 3px transparent;
+  border-radius: 90px;
+  background-image: linear-gradient(#fff, #fff),
+    radial-gradient(circle at top left, $pink, $purple) !important;
+  background-origin: border-box !important;
+  background-clip: content-box, border-box !important;
+}
+
+.button {
+  border-radius: 10px !important;
+  width: 140px;
+  &--secondary {
+    background-color: $purple !important;
+    color: #fff !important;
+  }
+}
